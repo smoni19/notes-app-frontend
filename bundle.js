@@ -24,12 +24,38 @@
     }
   });
 
+  // get_notes.js
+  var require_get_notes = __commonJS({
+    "get_notes.js"(exports, module) {
+      var get_notes2 = () => {
+        fetch("http://localhost:3000/notes").then((response) => {
+          return response.json();
+        }).then((jsonData) => {
+          console.log(jsonData);
+          jsonData.forEach((x) => {
+            newDiv = document.createElement("div");
+            newDiv.innerText = x.title;
+            document.body.appendChild(newDiv);
+          });
+        });
+      };
+      module.exports = get_notes2;
+    }
+  });
+
   // index.js
   var create_note = require_create_note();
+  var get_notes = require_get_notes();
   var title = document.querySelector("#title");
   var content = document.querySelector("#content");
   var button = document.querySelector("#submit");
+  var body = document.querySelector("body");
   button.addEventListener("click", () => {
     create_note(title.value, content.value);
+    get_notes();
+  });
+  window.addEventListener("load", () => {
+    console.log("test");
+    get_notes();
   });
 })();
