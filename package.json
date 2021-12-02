@@ -1,0 +1,24 @@
+{
+  "name": "notes-app-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "build": "esbuild index.js --bundle  --outfile=bundle.js --watch",
+    "url": "git+https://github.com/smoni19/notes-app-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smoni19/notes-app-frontend/issues"
+  },
+  "homepage": "https://github.com/smoni19/notes-app-frontend#readme",
+  "dependencies": {
+    "jest": "^27.4.3"
+  }
+}
