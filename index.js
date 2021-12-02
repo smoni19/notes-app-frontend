@@ -7,9 +7,10 @@ const button = document.querySelector('#submit');
 const body = document.querySelector('body')
 
 
+
 button.addEventListener('click', () => {
   create_note(title.value, content.value);
-  get_notes()
+  
 });
 
 window.addEventListener('load', () => {
@@ -17,3 +18,4 @@ window.addEventListener('load', () => {
   get_notes()
 
 })
+
