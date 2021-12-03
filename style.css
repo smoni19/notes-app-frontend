@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&display=swap');
+
+body, input, textarea
+{
+  background-color: yellowgreen;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input, textarea
+{
+  margin: 5 5 5 5;
+  width: 220px;
+}
+
+a
+{
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 20ch;
+  margin: 5 5 5 5;
+}
+
+span
+{
+  padding-right: 3px;
+}
+
+.note, #displayed_note
+{
+  border: 1px solid #7BA428;
+  background-color: #FFFFFF66;
+  margin-bottom: 3px;
+  padding: 3px;
+}
+
+#displayed_note
+{
+  width: 300px;
+}

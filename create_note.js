@@ -1,9 +1,7 @@
-
 const create_note = (title, content) => {
-  //const newDiv = document.createElement('div');
   const data = { title: title, content: content };
   fetch('http://localhost:3000/notes', {
-    method: 'POST', // or 'PUT'
+    method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
@@ -12,14 +10,11 @@ const create_note = (title, content) => {
   .then(response => response.json())
   .then(data => {
     console.log('Success:', data);
+    window.location.reload();
   })
   .catch((error) => {
     console.error('Error:', error);
   });
-
-  // newDiv.innerText = `${title}: ${content}`;
-  // newDiv.className = 'note';
-  // document.body.appendChild(newDiv);
 };
 
 module.exports = create_note;
